@@ -1,0 +1,25 @@
+<div class="weather-container">
+  <app-left-panel
+    [city]="city"
+    [autoRefresh]="autoRefresh()"
+    [quickLocations]="quickLocations"
+    [loading]="loading()"
+    [error]="error()"
+    [weather]="weather()"
+    [golfCondition]="getGolfCondition()"
+    [golfConditionText]="getGolfConditionText()"
+    [windDirection]="getWindDirection()"
+    (search)="onSearch($event)"
+    (locationRequest)="getCurrentLocation()"
+    (toggleRefresh)="toggleAutoRefresh()"
+    (locationSelect)="selectLocation($event)"
+    (retry)="getWeather()">
+  </app-left-panel>
+
+  <app-right-panel
+    [weather]="weather()"
+    [forecastData]="getDailyForecast()"
+    [golfTip]="getGolfTip()"
+    [lastUpdated]="lastUpdated()">
+  </app-right-panel>
+</div>

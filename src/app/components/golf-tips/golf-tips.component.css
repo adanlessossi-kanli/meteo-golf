@@ -1,0 +1,77 @@
+.golf-tips {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border-left: 4px solid #4CAF50;
+}
+
+@media (max-width: 768px) {
+  .golf-tips {
+    margin: 0 10px 15px 10px;
+    padding: 15px;
+    border-radius: 16px;
+  }
+  
+  .last-updated {
+    margin: 0 10px 15px 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .golf-tips {
+    margin: 0 5px 10px 5px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .golf-tips h4 {
+    font-size: 1em;
+  }
+  
+  .tip {
+    font-size: 0.9em;
+  }
+  
+  .last-updated {
+    margin: 0 5px 10px 5px;
+    padding: 8px;
+    font-size: 0.75em;
+  }
+}
+
+.golf-tips h4 {
+  margin: 0 0 12px 0;
+  color: #2c3e50;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.golf-tips h4::before {
+  content: '⛳';
+  font-size: 1.2em;
+}
+
+.tip {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.last-updated {
+  text-align: center;
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.8);
+  margin: 0 20px 20px 20px;
+  padding: 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}

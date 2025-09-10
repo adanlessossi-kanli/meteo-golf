@@ -1,0 +1,13 @@
+<div class="header">
+  <div class="brand">
+    <div class="logo">🌊⛳</div>
+    <div class="brand-text">
+      <h1>{{ i18n.translate('app.title') }}</h1>
+      <p>{{ i18n.translate('app.subtitle') }}</p>
+    </div>
+    <div class="language-switcher">
+      <button (click)="setLanguage('en')" [class.active]="i18n.language === 'en'">EN</button>
+      <button (click)="setLanguage('fr')" [class.active]="i18n.language === 'fr'">FR</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@if (forecastData && forecastData.length > 0) {
+  <div class="forecast-section">
+    <h4>5-Day Outlook</h4>
+    <div class="forecast-grid">
+      @for (day of forecastData; track day.date) {
+        <div class="forecast-day">
+          <div class="day-name">{{ day.date | date:'EEE' }}</div>
+          <img [src]="'https://openweathermap.org/img/wn/' + day.icon + '.png'" class="forecast-icon">
+          <div class="forecast-temp">{{ day.temp }}°</div>
+          <div class="forecast-condition" [ngClass]="day.golfCondition">{{ day.golfText }}</div>
+        </div>
+      }
+    </div>
+  </div>
+}

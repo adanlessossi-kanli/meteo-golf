@@ -1,0 +1,113 @@
+.forecast-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.forecast-section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(76,175,80,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.forecast-section h4 {
+  margin: 0 0 16px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  
+  .forecast-section {
+    margin: 0 10px 15px 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+  
+  .forecast-section {
+    margin: 0 5px 10px 5px;
+    padding: 12px;
+  }
+  
+  .forecast-day {
+    padding: 8px 4px;
+  }
+  
+  .day-name {
+    font-size: 0.7em;
+  }
+  
+  .forecast-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.forecast-day {
+  text-align: center;
+  padding: 12px 8px;
+  background: rgba(248,249,250,0.8);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.forecast-day:hover {
+  background: rgba(255,255,255,1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.day-name {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.forecast-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.forecast-temp {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.forecast-condition {
+  font-size: 0.7em;
+  padding: 2px 4px;
+  border-radius: 10px;
+  color: white;
+}
+
+.excellent { background: linear-gradient(135deg, #4CAF50, #45a049); }
+.good { background: linear-gradient(135deg, #8BC34A, #7CB342); }
+.fair { background: linear-gradient(135deg, #FF9800, #F57C00); }
+.poor { background: linear-gradient(135deg, #f44336, #d32f2f); }

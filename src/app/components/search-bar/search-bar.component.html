@@ -1,0 +1,16 @@
+<div class="search-section">
+  <input 
+    [(ngModel)]="city" 
+    [placeholder]="i18n.translate('search.placeholder')"
+    (keyup.enter)="onSearch()"
+    class="city-input">
+  <button (click)="onSearch()" class="search-btn" [title]="i18n.translate('search.button')">🔍</button>
+  <button (click)="onLocationRequest()" class="location-btn-gps" [title]="i18n.translate('search.location')">📍</button>
+  <button (click)="onToggleRefresh()" class="refresh-btn" [class.active]="autoRefresh" [title]="i18n.translate('search.refresh')">🔄</button>
+</div>
+
+<div class="quick-locations">
+  @for (location of quickLocations; track location) {
+    <button (click)="onLocationSelect(location)" class="location-btn">{{ location }}</button>
+  }
+</div>

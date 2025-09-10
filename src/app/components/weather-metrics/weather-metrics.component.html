@@ -1,0 +1,24 @@
+@if (weather) {
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-icon">💨</div>
+      <div class="metric-value">{{ weather.wind.speed }} m/s</div>
+      <div class="metric-label">Wind {{ windDirection }}</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-icon">💧</div>
+      <div class="metric-value">{{ weather.main.humidity }}%</div>
+      <div class="metric-label">Humidity</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-icon">👁️</div>
+      <div class="metric-value">{{ (weather.visibility / 1000 | number:'1.0-1') }} km</div>
+      <div class="metric-label">Visibility</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-icon">🌡️</div>
+      <div class="metric-value">{{ weather.main.pressure }}</div>
+      <div class="metric-label">Pressure hPa</div>
+    </div>
+  </div>
+}

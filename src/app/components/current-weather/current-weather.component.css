@@ -1,0 +1,130 @@
+.current-weather-card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  padding: 24px;
+  margin: 0 24px 20px 24px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+  position: relative;
+}
+
+.current-weather-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4CAF50, #2196F3);
+  border-radius: 18px 18px 0 0;
+}
+
+@media (max-width: 768px) {
+  .current-weather-card {
+    margin: 0 10px 15px 10px;
+    padding: 15px;
+  }
+  
+  .weather-main {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .temperature {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .current-weather-card {
+    margin: 0 5px 10px 5px;
+    padding: 12px;
+  }
+  
+  .temperature {
+    font-size: 2.5em;
+  }
+  
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.location-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.weather-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp-section .temp {
+  font-size: 3.5em;
+  font-weight: 300;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1;
+}
+
+.feels-like {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 4px;
+}
+
+.weather-visual {
+  text-align: center;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.description {
+  font-size: 1em;
+  text-transform: capitalize;
+  color: #666;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.condition-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85em;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.excellent { 
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+.good { 
+  background: linear-gradient(135deg, #8BC34A, #7CB342);
+  color: white;
+}
+.fair { 
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  color: white;
+}
+.poor { 
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: white;
+}

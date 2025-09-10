@@ -1,0 +1,12 @@
+@if (tip) {
+  <div class="golf-tips">
+    <h4>Golf Tips</h4>
+    <div class="tip">{{ tip }}</div>
+  </div>
+}
+
+@if (lastUpdated) {
+  <div class="last-updated">
+    Last updated: {{ lastUpdated | date:'short' }}
+  </div>
+}

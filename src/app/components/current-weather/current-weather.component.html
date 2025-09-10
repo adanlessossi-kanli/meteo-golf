@@ -1,0 +1,20 @@
+@if (weather) {
+  <div class="current-weather-card">
+    <div class="location-header">
+      <h2>{{ weather.name }}</h2>
+      <div class="condition-badge" [ngClass]="golfCondition">{{ golfConditionText }}</div>
+    </div>
+    
+    <div class="weather-main">
+      <div class="temp-section">
+        <div class="temp">{{ (weather.main.temp | number:'1.0-0') }}°</div>
+        <div class="feels-like">Feels like {{ (weather.main.feels_like | number:'1.0-0') }}°C</div>
+      </div>
+      <div class="weather-visual">
+        <img [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '@2x.png'" 
+             [alt]="weather.weather[0].description" class="weather-icon">
+        <div class="description">{{ weather.weather[0].description }}</div>
+      </div>
+    </div>
+  </div>
+}
