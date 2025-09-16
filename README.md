@@ -52,7 +52,13 @@ npm install
 npm start
 ```
 
-4. Open your browser and navigate to `http://localhost:4200`
+4. Start the docker container:
+```bash
+docker build -t meteo-golf .
+docker run -p 8080:80 meteo-golf
+```
+
+5. Open your browser and navigate to `http://localhost:4200`
 
 ## Available Scripts
 
