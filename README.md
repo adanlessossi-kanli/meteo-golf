@@ -1,5 +1,4 @@
 # Meteo Golf 🌊🌤️
-
 A weather application specifically designed for golfers in the Gulf of Guinea region. Get real-time weather conditions and golf-specific recommendations to plan your perfect round.
 
 ## Features
